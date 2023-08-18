@@ -1,0 +1,101 @@
+*{ 
+    box-sizing: border-box;
+    margin: 0;
+}
+html{
+    min-height: 100vh;
+    font-family: 'Lobster', cursive;
+}
+.heading  {
+    color: #ff9f1c;
+    text-align: center;
+    font-size: 4em;
+    
+}
+.board-container{
+    display: grid;
+    grid-template-columns: repeat(3, auto);
+    grid-gap: 15px;
+    justify-content: center;
+    /* background-color: #a2d2ff; */
+}
+.game-info{
+    display: flex;
+    grid-column: 1/-1;
+    margin-left: 50px;
+    font-size: 2em;
+    justify-content: space-around;
+}
+.card {
+    position: relative;
+    height: 120px;
+    width: 180px;
+    background-color: #219ebc;
+    justify-content: center;
+    align-items: center;
+    /* backface-visibility: hidden; */
+}
+
+.card-category{
+    height: 60px;
+    background-color:#cdb4db;
+    font-size: 1em;
+    text-align: center;
+   
+}
+.card-category h3{
+    margin: 15px 2px; 
+}
+.numbers {
+    text-align: center;
+    font-size: 2em;
+    margin:40px auto;
+    justify-content: center;
+    align-items: center;
+}
+.card:hover .numbers-face{
+    transform: rotateY(180deg); 
+}
+.card:hover .question-face{
+    transform: rotateY(0deg); 
+}
+.question-overlay{
+    animation: overlay-grow 700ms forwards;
+    display: flex;
+    flex-direction: column;
+    /* font-family: 'Courier New', Courier, monospace; */
+}
+@keyframes overlay-grow{
+    from {
+        background-color: rgba(0, 0, 0, 0);
+        font-size: 0;
+    }
+    to {
+        background-color: rgba(231, 212, 212, 0.85);
+        font-size: 0.8em;
+        height: 120px;
+        width: 180px;
+    }
+}
+.card-face{
+    position: absolute;
+    width: 100%;
+    height:100%;
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    backface-visibility: hidden;
+    transition: transform 300ms ease-in-out;
+}
+.question-face{
+    transform: rotateX(180deg);
+}
+
+form{
+    align-self: flex-start;
+    padding: 1em;
+    border: 1px solid #ccc;
+    border-radius: 1em;
+}
+
+
