@@ -4,9 +4,84 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <link rel="stylesheet" href="styles.css" />
+    <script def src="script.js" charset="utf-8"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Lobster&family=Roboto:wght@100&family=Rubik+Wet+Paint&display=swap" rel="stylesheet">
+    <title>Jeopardy</title>
 </head>
 <body>
-    
+    <h1 class="heading">Jeopardy</h1>
+    <!-- <div id ="start" class="overlay-text ">Start</div> -->
+        <div class = "board-container">
+             <div class =" game-info">
+                <div class="info-tile">Score :<span id="score">0</span></div>
+             </div>
+             <div class ="card-category">
+                  <h3>Space</h3>
+             </div>
+             <div class ="card-category">
+               <h3>General Questions</h3>
+             </div>
+             <div class ="card-category">
+               <h3>Scientist</h3>
+             </div>
+             <div class ="card ">
+                <div class = "numbers-face card-face">
+                  <div class="numbers">100</div>
+                </div>
+                <div class = "question-face card-face">
+                   <div class ="question-overlay">
+                     <form>
+                        <label>The moon called Titan, orbits which planet?</label><br>
+                        <input type="radio" name="question1" value="a">Saturn<br>
+                        <input type="radio" name="question1" value="b">Earth<br>
+                        <input type="submit" value="Submit">
+                     </form>
+                   </div>
+                </div>
+             </div>
+             <div class ="card">
+                <div class = "numbers-face card-face">
+                  <div class="numbers">100</div>
+                </div>
+             </div>
+             <div class ="card">
+                <div class = "numbers-face card-face">
+                  <div class="numbers">100</div>
+                </div>
+             </div>
+             <div class ="card">
+                <div class = "numbers-face card-face">
+                  <div class="numbers">200</div>
+                </div>
+             </div>
+             <div class ="card">
+                <div class = "numbers-face card-face">
+                  <div class="numbers">200</div>
+                </div>
+             </div>
+             <div class ="card">
+               <div class = "numbers-face card-face">
+                  <div class="numbers">200</div>
+               </div>
+            </div>
+            <div class ="card">
+               <div class = "numbers-face card-face">
+                  <div class="numbers">300</div>
+               </div>
+            </div>
+            <div class ="card">
+               <div class = "numbers-face card-face">
+                  <div class="numbers">300</div>
+               </div>
+            </div>
+            <div class ="card">
+              <div class = "numbers-face card-face">
+               <div class="numbers">300</div>
+              </div>
+           </div>
+    </div>
 </body>
 </html>
