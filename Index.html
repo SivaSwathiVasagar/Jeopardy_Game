@@ -15,8 +15,8 @@
     <h1 class="heading">Jeopardy</h1>
         <div class = "board-container">
              <div class =" game-info">
-                <div class="info-tile">Score :<span id="score">0</span></div>
-                <div class="info-tile">Correct-Answer :<span id="answer"></span></div>
+               <div class="info-tile">Score :<span id="score"></span></div>
+               <div class="info-tile">Game-Status :<span id="status">Not Started</span></div>
              </div>
              <div class ="card-category">
                   <h3>Space</h3>
@@ -35,9 +35,9 @@
                    <div class ="question-overlay">
                      <form id = "form0">
                         <label>The moon called Titan, orbits which planet?</label><br>
-                        <input type="radio" name="question" value="correct" id="correct">Saturn<br>  
-                        <input type="radio" name="question" value="incorrect">Earth<br>
-                        <input type="submit" value="Submit" onclick="result(form0)">
+                        <input type="radio" name="question" value="correct-100">Saturn<br>  
+                        <input type="radio" name="question" value="incorrect-100">Earth<br>
+                        <input type="button" value="Submit" onclick="result(form0)" id ="button">
                      </form>
                    </div>
                 </div>
@@ -50,9 +50,9 @@
                   <div class ="question-overlay">
                     <form id = "form1">
                        <label>What is the smallest US state by area?</label><br>
-                       <input type="radio" name="question" value="correct" id="correct">Rhode Island<br>
-                       <input type="radio" name="question" value="incorrect">Vermont<br>
-                       <input type="submit" value="Submit" onclick="result(form1)">
+                       <input type="radio" name="question" value="correct-100">Rhode Island<br>
+                       <input type="radio" name="question" value="incorrect-100">Vermont<br>
+                       <input type="button" value="Submit" onclick="result(form1)" id ="button">
                     </form>
                   </div>
                </div>
@@ -65,9 +65,9 @@
                   <div class ="question-overlay">
                     <form id = "form2">
                        <label>What is acrophobia a fear of?</label><br>
-                       <input type="radio" name="question" value="correct" id="correct">Flying<br>
-                       <input type="radio" name="question" value="incorrect">Fear of being lost<br>
-                       <input type="submit" value="Submit" onclick="result(form2)">
+                       <input type="radio" name="question" value="correct-100" id="100">Flying<br>
+                       <input type="radio" name="question" value="incorrect-100">Fear of being lost<br>
+                       <input type="button" value="Submit" onclick="result(form2)" id ="button">
                     </form>
                   </div>
                </div>
@@ -80,9 +80,9 @@
                   <div class ="question-overlay">
                     <form id = "form3">
                        <label>Uranus has only been visited by what spacecraft?</label><br>
-                       <input type="radio" name="question" value="incorrect"> The Voyager 1<br>
-                       <input type="radio" name="question" value="correct" id="correct"> The Voyager 2<br>
-                       <input type="submit" value="Submit" onclick="result(form3)">
+                       <input type="radio" name="question" value="incorrect-200"> The Voyager 1<br>
+                       <input type="radio" name="question" value="correct-200" id="correct"> The Voyager 2<br>
+                       <input type="button" value="Submit" onclick="result(form3)" id ="button">
                     </form>
                   </div>
                </div>
@@ -95,9 +95,9 @@
                   <div class ="question-overlay">
                     <form id = "form4">
                        <label>What is the name of the flattest state in the US?</label><br>
-                       <input type="radio" name="question" value="correct" id="correct">Florida<br>
-                       <input type="radio" name="question" value="incorrect">Texas<br>
-                       <input type="submit" value="Submit" onclick="result(form4)">
+                       <input type="radio" name="question" value="correct-200" id="correct">Florida<br>
+                       <input type="radio" name="question" value="incorrect-200">Texas<br>
+                       <input type="button" value="Submit" onclick="result(form4)" id ="button">
                     </form>
                   </div>
                </div>
@@ -110,9 +110,9 @@
                   <div class ="question-overlay">
                     <form id = "form5">
                        <label>What country has the most islands?</label><br>
-                       <input type="radio" name="question" value="correct" id="correct">Sweden<br>
-                       <input type="radio" name="question" value="incorrect">Philippines<br>
-                       <input type="submit" value="Submit" onclick="result(form5)">
+                       <input type="radio" name="question" value="correct-200" id="correct">Sweden<br>
+                       <input type="radio" name="question" value="incorrect-200">Philippines<br>
+                       <input type="button" value="Submit" onclick="result(form5)" id ="button">
                     </form>
                   </div>
                </div>
@@ -125,9 +125,9 @@
                   <div class ="question-overlay">
                     <form id = "form6">
                        <label>Phobos and Deimos are the Moons of which planet?</label><br>
-                       <input type="radio" name="question" value="incorrect">Saturn<br>
-                       <input type="radio" name="question" value="correct" id="correct">Mars<br>
-                       <input type="submit" value="Submit" onclick="result(form6)">
+                       <input type="radio" name="question" value="incorrect-300">Saturn<br>
+                       <input type="radio" name="question" value="correct-300" id="correct">Mars<br>
+                       <input type="button" value="Submit" onclick="result(form6)" id ="button">
                     </form>
                   </div>
                </div>
@@ -140,9 +140,9 @@
                   <div class ="question-overlay">
                     <form id = "form7">
                        <label>What is the only flag that does not have four sides?</label><br>
-                       <input type="radio" name="question" value="correct" id="correct">Nepal<br>
-                       <input type="radio" name="question" value="incorrect">Italy<br>
-                       <input type="submit" value="Submit" onclick="result(form7)">
+                       <input type="radio" name="question" value="correct-300" id="correct">Nepal<br>
+                       <input type="radio" name="question" value="incorrect-300">Italy<br>
+                       <input type="button" value="Submit" onclick="result(form7)" id ="button">
                     </form>
                   </div>
                </div>
@@ -155,9 +155,9 @@
                <div class ="question-overlay">
                  <form id = "form8">
                     <label>How many hearts does an octopus have?</label><br>
-                    <input type="radio" name="question" value="incorrect">7<br>
-                    <input type="radio" name="question" value="correct" >3<br>
-                    <input type="submit" value="Submit" onclick="result(form8)">
+                    <input type="radio" name="question" value="incorrect-300">7<br>
+                    <input type="radio" name="question" value="correct-300" >3<br>
+                    <input type="button" value="Submit" onclick="result(form8)" id ="button">
                  </form>
                </div>
             </div>
