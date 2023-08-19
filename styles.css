@@ -28,12 +28,13 @@ html{
 }
 .card {
     position: relative;
-    height: 120px;
-    width: 180px;
-    background-color: #219ebc;
+    height: 140px;
+    width: 220px;
+    background-color: #ccd5ae;
     justify-content: center;
     align-items: center;
-    /* backface-visibility: hidden; */
+    backface-visibility: hidden;
+    cursor: -webkit-grab; cursor: grab;
 }
 
 .card-category{
@@ -53,29 +54,26 @@ html{
     justify-content: center;
     align-items: center;
 }
-.card:hover .numbers-face{
+.card.visible .numbers-face{
     transform: rotateY(180deg); 
 }
-.card:hover .question-face{
+.card.visible .question-face{
     transform: rotateY(0deg); 
 }
 .question-overlay{
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    justify-content: center;
+    align-items: center;
+    z-index: 10;
+}
+.question-overlay.visible{
     animation: overlay-grow 700ms forwards;
     display: flex;
     flex-direction: column;
-    /* font-family: 'Courier New', Courier, monospace; */
-}
-@keyframes overlay-grow{
-    from {
-        background-color: rgba(0, 0, 0, 0);
-        font-size: 0;
-    }
-    to {
-        background-color: rgba(231, 212, 212, 0.85);
-        font-size: 0.8em;
-        height: 120px;
-        width: 180px;
-    }
 }
 .card-face{
     position: absolute;
@@ -93,9 +91,18 @@ html{
 
 form{
     align-self: flex-start;
-    padding: 1em;
-    border: 1px solid #ccc;
+    padding: 0.5em;
+    background-color: #ccc;
     border-radius: 1em;
+    line-height: 1.5;
+    width: 100%;
+    height:100%;
+    font-size: 1em;
 }
-
-
+input[type=submit]{
+    font-size: 0.7em;
+    cursor: pointer;
+}
+input[type="radio"]{
+    margin-right: 5px;
+}
