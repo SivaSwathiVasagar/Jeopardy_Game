@@ -2,7 +2,6 @@ let cardsArray = document.querySelectorAll(".card");
 let forms = document.querySelectorAll(".form");
 let onScreenStatus;
 let gameStatus = document.getElementById("status");
-gameStatus.style.fontSize = '24px';
 let score = 0;
 let addScore = document.getElementById("score");
 addScore.textContent= score;
@@ -13,13 +12,15 @@ cardsArray.forEach((card) => {
     })
 });
 
-function result(form){
+function checkResult(form){
+    disableButton(form);
     onScreenStatus = " Started ";
     gameStatus.textContent = onScreenStatus;
     let formData = new FormData(form);
     let userSelectedAnswer = formData.get("question");
     let makeUserSelectedQuestionVisible = document.querySelector(".question-overlay");
     makeUserSelectedQuestionVisible.classList.add("visible");
+
     if((userSelectedAnswer === "correct-100") || (userSelectedAnswer === "correct-200") || (userSelectedAnswer === "correct-300"))
     {
         alert("Correct Answer, You got it.");
@@ -65,6 +66,14 @@ function result(form){
         gameStatus.textContent = onScreenStatus;
         alert ("You WIN !!!");
     }
+}
+
+function disableButton(form){
+    let inputs = [];
+    let a = document.forms[form.id].getElementsByTagName("input");
+    inputs = [...a];
+    let buttons = inputs.filter(x => x.type === 'button');
+    buttons[0].disabled = true;
 }
 
 
