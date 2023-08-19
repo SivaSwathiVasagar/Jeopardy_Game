@@ -16,8 +16,7 @@ body{
 .heading  {
     color: #ff9f1c;
     text-align: center;
-    font-size: 4em;
-    
+    font-size: 4em;   
 }
 .board-container{
     display: grid;
@@ -25,7 +24,7 @@ body{
     grid-gap: 15px;
     justify-content: center;
     z-index: 1;
-    /* background-color: #a2d2ff; */
+    margin-top: 10px;
 }
 .game-info{
     display: flex;
@@ -108,25 +107,48 @@ form{
     height:100%;
     font-size: 1em;
 }
-input[type=submit]{
-    font-size: 0.7em;
+input[type=button]{
+    font-size: 0.9em;
     cursor: pointer;
 }
 input[type="radio"]{
     margin-right: 5px;
 }
 
-/* @media (max-width: 500px) {
+@media (max-width: 500px) {
     .board-container {
         grid-template-columns: repeat(3, auto);
+        margin-top: 0;
     }
     .game-info {
         flex-direction: column;
         align-items: center;
-        font-size: 0.2em;
+        font-size: 1em;
      }
-     .card {
-        height: 100px;
-        width: 100px;
+     .heading  {
+        text-align: center;
+        font-size: 2.5em;   
     }
-    } */
+    .card{
+        height: 165px;
+        width: 140px;
+    }
+    form{
+        line-height: 1.7;
+        width: 100%;
+        height:100%;
+        font-size: 0.9em;
+    }
+    input[type=button]{
+        font-size: 0.5em;
+        cursor: pointer;
+    }
+    span{
+        font-size: 0.7em;
+    }
+    body{
+        background-image: url("https://images.unsplash.com/photo-1513151233558-d860c5398176?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MXx8cXVpeiUyMGdhbWV8ZW58MHx8MHx8fDA%3D&w=1000&q=80");
+        background-size: cover;
+        background-position: center; 
+    }
+    }
